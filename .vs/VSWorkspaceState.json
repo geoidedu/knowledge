@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\CryptoBank",
+    "\\CryptoBank\\Bank.Auth",
+    "\\CryptoBank\\Bank.Auth\\Features",
+    "\\CryptoBank\\Bank.Auth\\Features\\Auth",
+    "\\CryptoBank\\Bank.Auth\\Features\\Auth\\Requests",
+    "\\CryptoBank\\Bank.Auth\\Features\\Auth\\Requests\\Controllers",
+    "\\WorkOne"
+  ],
+  "SelectedNode": "\\CryptoBank\\Bank.Auth\\Features\\Auth\\Requests\\Controllers\\AuthController.cs",
+  "PreviewInSolutionExplorer": false
+}

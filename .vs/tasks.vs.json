@@ -1,0 +1,15 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-WorkOne",
+      "appliesTo": "WorkOne/",
+      "type": "launch"
+    },
+    {
+      "taskLabel": "task-knowledge",
+      "appliesTo": "/",
+      "type": "launch"
+    }
+  ]
+}
