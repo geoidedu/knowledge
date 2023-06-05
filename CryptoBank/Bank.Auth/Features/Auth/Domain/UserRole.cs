@@ -18,14 +18,14 @@ namespace Bank.Auth.Features.Auth.Domain
         /// <summary>
         /// Пользователь
         /// </summary>
-        User = 1,
+        User,
         /// <summary>
         /// Аналитик
         /// </summary>
-        Analist = 2,
+        Analist,
         /// <summary>
         /// Администратор
         /// </summary>
-        Administrator = 3
+        Administrator
     }
 }

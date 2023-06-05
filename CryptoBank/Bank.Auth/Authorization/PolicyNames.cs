@@ -2,8 +2,8 @@
 {
     public static class PolicyNames
     {
-        public const string User = "UserRole";
-        public const string Analist = "AnalistRole";
-        public const string Admin = "AdminRole";
+        public const string User = "User"; //"UserRole";
+        public const string Analist = "Analist"; //"AnalistRole";
+        public const string Admin = "Administrator"; //"AdminRole";
     }
 }

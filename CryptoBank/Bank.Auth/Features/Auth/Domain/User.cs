@@ -7,11 +7,20 @@ public class User
     [Key]
     public string Id { get; set; } = null!;
 
-    [StringLength(maximumLength: 20, MinimumLength = 5, ErrorMessage = "Мах длина страки 20")]
+    [StringLength(maximumLength: 25, MinimumLength = 5, ErrorMessage = "Мах длина страки 20")]
     public string UserName { get; set; } = null!;
 
-    [StringLength(maximumLength: 12, MinimumLength = 5, ErrorMessage = "Мах длина страки 20")]
+    [StringLength(maximumLength: 50, MinimumLength = 5, ErrorMessage = "Мах длина страки 20")]
     public string Password { get; set; } = null!;
+
+    /// <summary>
+    /// Дата рождение
+    /// </summary>
+    public string? DateOfBirth { get; set; }
+    /// <summary>
+    /// Дата регистрация
+    /// </summary>
+    public string DateOfRegister { get; set; } = null!;
 }
 
 

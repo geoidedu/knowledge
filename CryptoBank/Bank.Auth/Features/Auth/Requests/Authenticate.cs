@@ -1,6 +1,7 @@
 ﻿using Bank.Auth.DbAccess;
 using Bank.Auth.Features.Auth.Domain;
 using Bank.Auth.Features.Auth.Options;
+using Bank.Auth.Features.Auth.Services.crypto;
 using FluentValidation;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.OAuth;
@@ -13,7 +14,7 @@ using System.Text;
 
 namespace Bank.Auth.Features.Auth.Requests
 {
-    public class Authenticate
+    public static class Authenticate
     {
         public record Request(string Name, string Password) : IRequest<Response>;
 
@@ -33,11 +34,13 @@ namespace Bank.Auth.Features.Auth.Requests
         {
             private readonly AuthOptions _options;
             private readonly AppDbContext _db;
+            private readonly Argon2Crypto _crypto;
 
-            public RequestHandler(IOptions<AuthOptions> options, AppDbContext db)
+            public RequestHandler(IOptions<AuthOptions> options, AppDbContext db, Argon2Crypto crypto)
             {
                 _options = options.Value;
                 _db = db;
+                _crypto = crypto;
             }
 
             public async Task<Response> Handle(Request request, CancellationToken cancellationToken)
@@ -49,7 +52,7 @@ namespace Bank.Auth.Features.Auth.Requests
                     throw new Exception("User существует");
                 }
 
-                user = new User { Id = Guid.NewGuid().ToString(), UserName = request.Name, Password = request.Password };
+                user = new User { Id = Guid.NewGuid().ToString(), UserName = request.Name, Password = Convert.ToBase64String(_crypto.HashPassword(request.Password)), DateOfRegister = DateTime.Now.ToString(), };
                 await _db.Users.AddAsync(user);
                 await _db.SaveChangesAsync();
 
