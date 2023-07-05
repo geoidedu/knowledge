@@ -6,9 +6,8 @@
     "\\CryptoBank\\Bank.Auth\\Features",
     "\\CryptoBank\\Bank.Auth\\Features\\Auth",
     "\\CryptoBank\\Bank.Auth\\Features\\Auth\\Requests",
-    "\\CryptoBank\\Bank.Auth\\Features\\Auth\\Requests\\Controllers",
-    "\\WorkOne"
+    "\\CryptoBank\\Bank.Auth\\Features\\Auth\\Requests\\Controllers"
   ],
-  "SelectedNode": "\\CryptoBank\\Bank.Auth\\Features\\Auth\\Requests\\Controllers\\AuthController.cs",
+  "SelectedNode": "\\CryptoBank\\Bank.Auth\\Features\\Auth\\Requests\\Authenticate.cs",
   "PreviewInSolutionExplorer": false
 }

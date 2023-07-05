@@ -1,8 +1,5 @@
-﻿using Bank.Auth.Authorization;
-using Bank.Auth.Features.Auth.Domain;
-using MediatR;
+﻿using MediatR;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Bank.Auth.Features.Auth.Requests.Controllers
